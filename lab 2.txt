@@ -1,0 +1,30 @@
+{
+   "faculty": "ФІТ",
+   "decanName": "Иванов",
+   "roomNumber": 4,
+   "builbingNumber": 3,
+   "phoneNumbers": [
+       "342 233-1244",
+       "316 143-4767"
+   ]
+},
+{
+   "faculty": "ФП",
+   "decanName": "Иванов",
+   "roomNumber":123,
+   "builbingNumber": 7,
+   "phoneNumbers": [
+       "812 123-1234",
+       "916 123-4567"
+   ]
+},
+{
+   "faculty": "ФФ",
+   "decanName": "Иванов",
+   "roomNumber": 512,
+   "builbingNumber": 3,
+   "phoneNumbers": [
+       "432 163-1234",
+       "654 154-4767"
+   ]
+},
