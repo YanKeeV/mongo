@@ -1,0 +1,11 @@
+db.github.replaceOne({branch: "relese"}, {branch: "relese", autor: "Sem"})
+db.github.updateOne({_id : ObjectId("62840d6b75be0e2e3e27785f")}, {$set: {branch: "develop", autor : "Vadim"}})
+db.github.updateOne({autor : "Sem"}, {$set: {branch :"master"}})
+db.github.updateMany({branch : "master"}, {$set: {branch : "relese"}})
+db.github.update({autor : "Sem"}, {$unset: {branch :"master"}})
+db.github.updateMany({_id : ObjectId("62840f2375be0e2e3e277860")}, {$push: {changes: "change 11"}})
+db.github.updateOne({_id : ObjectId("62840fdfdabf61582e7f8120")}, {$push: {changes: {$each: ["change 12", "change 13"], $position:1, $slice:5}}})
+db.github.update({_id : ObjectId("62840fdfdabf61582e7f8120")}, {$addToSet: {changes: "change 12"}}) - change 14 чтобы выполнилось
+db.github.updateOne({_id : ObjectId("62840fdfdabf61582e7f8120")}, {$pop: {DLS: 1}})
+db.github.deleteOne({_id : ObjectId("62840f3175be0e2e3e277861")})
+db.github.deleteOne({autor : /^S\w+/i}) - удалить документ где имя на А

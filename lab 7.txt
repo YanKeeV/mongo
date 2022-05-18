@@ -1,0 +1,4 @@
+db.github.createIndex({"branch":1})
+
+db.github.createIndex({"branch":1, "autor":1},{"unique":true})
+db.github.getIndexes()

@@ -1,0 +1,27 @@
+db.createCollection("git")
+db.createCollection("autor")
+
+db.git.insertOne({
+   "branch": "master",
+   "description": "some description",
+   "changes":  [
+       "change 1",
+       "change 2"
+   ],
+   "autor": "Nazar"
+})
+
+
+db.autor.insertOne({
+   "name": "Nazar",
+   "age": "20",
+   "position": "programist",
+   "country": "ukraine"
+})
+
+git = ({"branch": "master", "description": "some new information", "changes":  [ "change 3", "change 4"], "autor": {"$ref": "autor", "$id" : "628426b9dabf61582e7f8122"}})
+db.git.insertOne(git)
+
+db.git.find().pretty()
+
+db.git.findOne({_id: git.autor.$id})
